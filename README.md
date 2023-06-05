@@ -1,71 +1,31 @@
-# vscode-yl-crud-helper README
+# Welcome to your VS Code Extension
 
-This is the README for your extension "vscode-yl-crud-helper". After writing up a brief description, we recommend including the following sections.
+## 环境🏠
 
-## Features
+* node 版本 >16
+* 推荐使用 [nvm](https://zhuanlan.zhihu.com/p/550264306) 管理多版本 node
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## 安装依赖🔨
 
-For example if there is an image subfolder under your extension project workspace:
+* npm i
 
-\!\[feature X\]\(images/feature-x.png\)
+## 启动🏃
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+* 按 F5 进入调试状态（如果报错启动调试失败，请彻底关闭所有 VSCode 窗口重试，再不行就卸载 VSCode 重装）。
+* 顺利的话，此时会打开一个拓展窗口，在新窗口里打开用于调试 VSCode 插件的项目。例如本插件项目，在调试项目窗口的 `<template><div> 这里输入标签关键字<yl </div></template>` 就会成功的提示出我们在 `src/attributes.ts` 和 `src/tags.ts` 中配置的一些提示信息。
 
-## Requirements
+## 调试🐞
+* 当你修改了本插件代码，并且想在新窗口的调试项目中获得更新时，请在新窗口按 `Ctrl+R or Cmd+R on Mac` 去重载调试项目。
+* 调试过程中，console.log 在插件项目中不太奏效，我们可以通过点击 VSCode 侧边栏的 `运行和调试` 按钮，然后在需要 Debug 的代码行数左边点击 `暗红色小圆点` 激活本行代码的编辑器调试功能，并且在左边的断点窗口看到对应的提示，此时我们切换到调试项目，按下重载按钮，就可以进行我们的断点调试了。
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## Extension Settings
+## 探索 API✨
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+* 打开文件 `node_modules/@types/vscode/index.d.ts`，里面有详细的 API 说明。或者你也可以阅览[本篇文档](https://bookstack.cn/read/VS-Code-Extension-Doc-ZH)去获得一个更加详细和的开发流程和代码示例。
 
-For example:
+## 发布✌️
 
-This extension contributes the following settings:
+* [请参阅本章](https://www.bookstack.cn/read/VS-Code-Extension-Doc-ZH/docs-extension-authoring-publish-extension.md)
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+## 本项目期待和感谢您的贡献🍰
