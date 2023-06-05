@@ -1,47 +1,31 @@
 # Welcome to your VS Code Extension
 
-## What's in the folder
+## 环境🏠
 
-* This folder contains all of the files necessary for your extension.
-* `package.json` - this is the manifest file in which you declare your extension and command.
-  * The sample plugin registers a command and defines its title and command name. With this information VS Code can show the command in the command palette. It doesn’t yet need to load the plugin.
-* `src/extension.ts` - this is the main file where you will provide the implementation of your command.
-  * The file exports one function, `activate`, which is called the very first time your extension is activated (in this case by executing the command). Inside the `activate` function we call `registerCommand`.
-  * We pass the function containing the implementation of the command as the second parameter to `registerCommand`.
+* node 版本 >16
+* 推荐使用 [nvm](https://zhuanlan.zhihu.com/p/550264306) 管理多版本 node
 
-## Setup
+## 安装依赖🔨
 
-* install the recommended extensions (amodio.tsl-problem-matcher and dbaeumer.vscode-eslint)
+* npm i
 
+## 启动🏃
 
-## Get up and running straight away
+* 按 F5 进入调试状态（如果报错启动调试失败，请彻底关闭所有 VSCode 窗口重试，再不行就卸载 VSCode 重装）。
+* 顺利的话，此时会打开一个拓展窗口，在新窗口里打开用于调试 VSCode 插件的项目。例如本插件项目，在调试项目窗口的 `<template><div> 这里输入标签关键字<yl </div></template>` 就会成功的提示出我们在 `src/attributes.ts` 和 `src/tags.ts` 中配置的一些提示信息。
 
-* Press `F5` to open a new window with your extension loaded.
-* Run your command from the command palette by pressing (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and typing `Hello World`.
-* Set breakpoints in your code inside `src/extension.ts` to debug your extension.
-* Find output from your extension in the debug console.
-
-## Make changes
-
-* You can relaunch the extension from the debug toolbar after changing code in `src/extension.ts`.
-* You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes.
+## 调试🐞
+* 当你修改了本插件代码，并且想在新窗口的调试项目中获得更新时，请在新窗口按 `Ctrl+R or Cmd+R on Mac` 去重载调试项目。
+* 调试过程中，console.log 在插件项目中不太奏效，我们可以通过点击 VSCode 侧边栏的 `运行和调试` 按钮，然后在需要 Debug 的代码行数左边点击 `暗红色小圆点` 激活本行代码的编辑器调试功能，并且在左边的断点窗口看到对应的提示，此时我们切换到调试项目，按下重载按钮，就可以进行我们的断点调试了。
 
 
-## Explore the API
+## 探索 API✨
 
-* You can open the full set of our API when you open the file `node_modules/@types/vscode/index.d.ts`.
+* 打开文件 `node_modules/@types/vscode/index.d.ts`，里面有详细的 API 说明。或者你也可以阅览[本篇文档](https://bookstack.cn/read/VS-Code-Extension-Doc-ZH)去获得一个更加详细和的开发流程和代码示例。
 
-## Run tests
+## 发布✌️
 
-* Open the debug viewlet (`Ctrl+Shift+D` or `Cmd+Shift+D` on Mac) and from the launch configuration dropdown pick `Extension Tests`.
-* Press `F5` to run the tests in a new window with your extension loaded.
-* See the output of the test result in the debug console.
-* Make changes to `src/test/suite/extension.test.ts` or create new test files inside the `test/suite` folder.
-  * The provided test runner will only consider files matching the name pattern `**.test.ts`.
-  * You can create folders inside the `test` folder to structure your tests any way you want.
+* [请参阅本章](https://www.bookstack.cn/read/VS-Code-Extension-Doc-ZH/docs-extension-authoring-publish-extension.md)
 
-## Go further
 
-* Reduce the extension size and improve the startup time by [bundling your extension](https://code.visualstudio.com/api/working-with-extensions/bundling-extension).
-* [Publish your extension](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) on the VS Code extension marketplace.
-* Automate builds by setting up [Continuous Integration](https://code.visualstudio.com/api/working-with-extensions/continuous-integration).
+## 本项目期待和感谢您的贡献🍰
