@@ -45,7 +45,6 @@
   },
   "dependencies": {
     "@vue/compiler-sfc": "^3.3.4",
-    "element-helper-json-new": "^2.0.6",
     "pretty": "^2.0.0"
   }
 }

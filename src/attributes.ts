@@ -1,4 +1,7 @@
 export default {
+  /** description: 提示描述
+   *  type: 类型 method（方法） | flag（不需要传值的属性，例如 clearable 等）
+   */
   ref: { description: '组件 ref，默认为 params' },
   data: { description: '表格数据' },
   option: { description: 'crud 配置项' },

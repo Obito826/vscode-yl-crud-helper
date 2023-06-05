@@ -3,10 +3,11 @@ import {
   TextDocument, Position, CompletionItem, CompletionList, CompletionItemKind,
   SnippetString, Range
 } from 'vscode';
-import * as kebabCaseATTRS from 'element-helper-json-new/element-attributes.json';
 import attrs from './attributes';
 import tags from './tags';
+
 const prettyHTML = require('pretty');
+
 export interface TagObject{
   text: string,
   offset: number
@@ -14,33 +15,6 @@ export interface TagObject{
 
 const TAGS = tags;
 const ATTRS = attrs;
-// for (const key in kebabCaseATTRS) {
-//   if (kebabCaseATTRS.hasOwnProperty(key)) {
-//      // @ts-ignore
-//     const element = kebabCaseATTRS[key];
-//      // @ts-ignore
-//     ATTRS[key] = element;
-//     const tagAttrs = key.split('/');
-//     const hasTag = tagAttrs.length > 1;
-//     let tag = '';
-//     let attr = '';
-//     if (hasTag) {
-//       tag = toUpperCase(tagAttrs[0]) + '/';
-//       attr = tagAttrs[1];
-//        // @ts-ignore
-//       ATTRS[tag + attr] = JSON.parse(JSON.stringify(element));
-//     }
-//   }
-// }
-
-// function toUpperCase(key: string): string {
-//   let camelCase = key.replace(/\-(\w)/g, function (all, letter) {
-//     return letter.toUpperCase();
-//   });
-//   camelCase = camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
-//   return camelCase;
-// }
-
 export class ElementCompletionItemProvider implements CompletionItemProvider {
    // @ts-ignore
   private _document: TextDocument;
@@ -179,9 +153,7 @@ export class ElementCompletionItemProvider implements CompletionItemProvider {
 
   getTagAttrs(tag: string) {
     // @ts-ignore
-
-  return  (TAGS[tag] && TAGS[tag].attributes) || [];
-      // return ["abc","def"];
+    return  (TAGS[tag] && TAGS[tag].attributes) || [];
   }
 
   getAttrItem(tag: string | undefined, attr: string | undefined) {
